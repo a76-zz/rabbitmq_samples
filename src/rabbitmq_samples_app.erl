@@ -10,6 +10,7 @@
 %% ===================================================================
 
 start(_StartType, _StartArgs) ->
+    io:format("Application is started.~n"),
     rabbitmq_samples_sup:start_link().
 
 stop(_State) ->
