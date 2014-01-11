@@ -28,17 +28,30 @@ Check status:
 
 	sudo ./rabbitmqctl status
 
+Git 
+------------------------------------------------------
+Commit:
+	
+	$git commit -m "Comment"
+
+Push:
+
+	$ git push -u origin master
+
+Pull:
+
+    $ git pull
 
 
 Compile and run your application locally
 ------------------------------------------------------
 
-### Compile the erlapp application using rebar: ### 
+Compile the erlapp application using rebar: 
 
 	$ ./rebar get-deps compile
 
 
-### Start the application and verify that everything works as expected: ###
+Start the application and verify that everything works as expected:
 
-	$ erl -pa ebin deps/*/ebin -s erlapp
+	$ erl -pa ebin deps/*/ebin -s rabbitmq_samples
 	
