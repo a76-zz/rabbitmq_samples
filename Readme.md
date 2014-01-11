@@ -16,6 +16,7 @@ How install and build rabbit mq server from source code:
 	make
 
 Start from console:
+
 	make run
 
 Start from script:
@@ -24,4 +25,20 @@ Start from script:
 	sudo ./rabbitmq-server
 
 Check status:
+
 	sudo ./rabbitmqctl status
+
+
+
+Compile and run your application locally
+------------------------------------------------------
+
+### Compile the erlapp application using rebar: ### 
+
+	$ ./rebar get-deps compile
+
+
+### Start the application and verify that everything works as expected: ###
+
+	$ erl -pa ebin deps/*/ebin -s erlapp
+	
