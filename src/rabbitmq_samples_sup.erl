@@ -23,8 +23,8 @@ start_link() ->
 %% ===================================================================
 
 init([]) ->
-	Children = [?CHILD(hello_world_server, worker),
-				?CHILD(hello_rabbitmq_server, worker)],
+	Children = [?CHILD(hello_rabbitmq_server, worker),
+				?CHILD(hello_rabbitmq_event, worker)],
 	RestartStrategy = {one_for_one, 0, 1},
 	{ok, {RestartStrategy, Children}}.
 
